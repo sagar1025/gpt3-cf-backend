@@ -49,25 +49,22 @@ exports.handler = async (event, context) => {
 
         if (result && result.choices && result.choices.length > 0 && result.choices[0].text) {
             return {
-                statusCode = 200,
-                body = {
+                statusCode: 200,
+                body: {
                     template: result.choices[0].text.split('\n\n')[1]
                 },
                 headers
             }
         }
         return {
-            statusCode = 200,
-            body = { template: 'Error' },
+            statusCode: 200,
+            body: { template: 'Error' },
             headers
         }
     }
-    else {
-        statusCode = 401
-    }
 
     return {
-        statusCode,
+        statusCode: 401,
         body,
         headers
     }
