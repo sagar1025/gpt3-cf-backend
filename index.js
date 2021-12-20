@@ -6,7 +6,7 @@ exports.handler = async (event, context) => {
     const headers = {
         'Content-Type':'application/json'
     };
-    console.log(event);
+    //console.log(event);
 
     const requestBody = event && event.body ? JSON.parse(event.body) : null;
     try {
@@ -40,6 +40,7 @@ exports.handler = async (event, context) => {
               method: 'POST'
             });
             result = await gptRes.json();
+            console.log(result);
       
             if (result && result.choices && result.choices.length > 0) {
               if(result.choices[0].finish_reason && result.choices[0].finish_reason === 'length' && result.choices[0].text && result.choices[0].text.length > 0) {
