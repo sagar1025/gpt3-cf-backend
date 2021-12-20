@@ -1,5 +1,5 @@
 const AWS = require('aws-sdk')
-import fetch from "node-fetch";
+const fetch = require('node-fetch');
 
 exports.handler = async (event, context) => {
     let body, statusCode = 200;
