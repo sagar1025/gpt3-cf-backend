@@ -1,4 +1,5 @@
 const AWS = require('aws-sdk')
+import fetch from "node-fetch";
 
 exports.handler = async (event, context) => {
     let body, statusCode = 200;
@@ -6,7 +7,7 @@ exports.handler = async (event, context) => {
         'Content-Type':'application/json'
     };
     console.log(event);
-    console.log(context);
+
     const requestBody = event && event.body ? JSON.parse(event.body) : null;
     try {
       if (requestBody !== null && requestBody.description && requestBody.description.length > 0) {
