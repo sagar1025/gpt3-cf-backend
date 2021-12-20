@@ -22,7 +22,7 @@ exports.handler = async (event, context) => {
               break;
             }
             c = c - 1;
-            gptRes = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
+            gptRes = await fetch('https://api.openai.com/v1/engines/cushman-codex/completions', {
               body: JSON.stringify({
                 "prompt": p,
                 "temperature": 0,
