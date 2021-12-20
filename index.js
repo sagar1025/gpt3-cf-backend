@@ -9,7 +9,7 @@ exports.handler = async (event, context) => {
     console.log(context);
     const requestBody = event && event.body ? JSON.parse(event.body) : null;
     try {
-      if (requestBody.description && requestBody.description.length > 0) {
+      if (requestBody !== null && requestBody.description && requestBody.description.length > 0) {
           let p = `"""\n# YAML\n# Write a CloudFormation template to create an ${requestBody.description}\n# Use this documentation as a guide\n# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-guide.html\n\nAWSTemplateFormatVersion: '2010-09-09'\nMetadata:\n  License: Apache-2.0\nbody.description: ${requestBody.description}\n`;
           let stop = false;
           let result = {};
