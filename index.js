@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk')
 
 exports.handler = async (event, context) => {
-    let body, statusCode = 400;
+    let body, statusCode = 200;
     const headers = {
         'Content-Type':'application/json'
     };
@@ -66,7 +66,7 @@ exports.handler = async (event, context) => {
           }
       }
     }
-    catch(e) { console.log(e); }
+    catch(e) { console.log(e); statusCode = 500; }
     finally {
       return {
           statusCode,
