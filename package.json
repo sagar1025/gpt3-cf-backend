@@ -1,0 +1,30 @@
+{
+  "name": "gpt3-cf-backend",
+  "version": "0.1",
+  "description": "lambda function for gpt3-cloudformation repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagar1025/gpt3-cf-backend.git"
+  },
+  "keywords": [
+    "lambda",
+    "function",
+    "for",
+    "gpt3-cloudformation",
+    "repo"
+  ],
+  "author": "sagar patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagar1025/gpt3-cf-backend/issues"
+  },
+  "homepage": "https://github.com/sagar1025/gpt3-cf-backend#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1046.0",
+    "dotenv": "^10.0.0"
+  }
+}
