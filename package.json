@@ -1,6 +1,6 @@
 {
   "name": "gpt3-cf-backend",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "lambda function for gpt3-cloudformation repo",
   "main": "index.js",
   "scripts": {
