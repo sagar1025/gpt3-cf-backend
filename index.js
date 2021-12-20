@@ -6,6 +6,7 @@ exports.handler = async (event, context) => {
         'Content-Type':'application/json'
     };
     console.log(event);
+    console.log(context);
     if (event.description && event.description.length > 0) {
         let p = `"""\n# YAML\n# Write a CloudFormation template to create an ${event.description}\n# Use this documentation as a guide\n# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-guide.html\n\nAWSTemplateFormatVersion: '2010-09-09'\nMetadata:\n  License: Apache-2.0\nDescription: ${event.description}\n`;
         let stop = false;
