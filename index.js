@@ -56,7 +56,7 @@ exports.handler = async (event, context) => {
               return {
                   statusCode: 200,
                   body: {
-                      'template': result.choices[0].text.split('\n\n')[1]
+                      'template': result.choices[0].text
                   },
                   headers
               }
